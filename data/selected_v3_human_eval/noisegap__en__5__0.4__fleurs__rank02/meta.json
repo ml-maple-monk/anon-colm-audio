@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "martelly swore in a new provisional electoral council cep of nine members yesterday",
+  "pred_text_norm": "martelly s swore in a new prov sisional electoral counsi council of nine membe members yesterday",
+  "clean_model_pred_norm": "martelly swore in a new provisional electoral council of nine members yesterday",
+  "model": "scribe_v1",
+  "wer_augmentation": 46.1538,
+  "wer_clean": 7.6923
+}

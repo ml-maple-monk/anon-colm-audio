@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "appropriate use of blogs can empower students to become more analytical and critical through actively responding to internet materials students can define their positions in the context of others writings as well as outline their own perspectives on particular issues oravec two thousand and two",
+  "pred_text_norm": "through actively responding to media materials students can define their positions in the context of others",
+  "clean_model_pred_norm": "appropriate use of blogs can empower students to become more analytical and critical through actively responding to internet materials students can define their positions in the context of others writings as well as outline their perspectives on particular issues oravec two thousand and two",
+  "model": "gpt-4o-transcribe",
+  "wer_augmentation": 64.2857,
+  "wer_clean": 2.381
+}

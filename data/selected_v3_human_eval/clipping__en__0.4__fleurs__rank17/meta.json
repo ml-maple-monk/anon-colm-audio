@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "vatican citys population is around eight hundred it is the smallest independent country in the world and the country with the lowest population",
+  "pred_text_norm": "vatican city population is around eight hundred it is the smallest independent country in the world by population",
+  "clean_model_pred_norm": "vatican city population is around eight hundred it is the smallest independent country in the world and the population",
+  "model": "gemini-3-pro-preview",
+  "wer_augmentation": 31.8182,
+  "wer_clean": 22.7273
+}

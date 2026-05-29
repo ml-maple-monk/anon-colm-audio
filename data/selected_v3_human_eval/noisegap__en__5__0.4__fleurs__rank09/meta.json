@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "he was also engaged in engraving banknotes for many countries recent examples of his work including the prime ministerial portraits on the front of the new canadian five dollars and one hundred dollars bills",
+  "pred_text_norm": "he was also engaged in engraving banknotes for many countries",
+  "clean_model_pred_norm": "he was also engaged in engraving banknotes for many countries recent examples of his work including the prime ministerial portraits on the front of the new canadian fivedollar and hundreddollar bills",
+  "model": "gpt-4o-transcribe",
+  "wer_augmentation": 67.7419,
+  "wer_clean": 6.4516
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audio Comparison: Clean vs Degraded</title>
+  <style>
+    body { font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 24px; color: #222; }
+    h1 { font-size: 20px; margin-bottom: 4px; }
+    .subtitle { font-size: 14px; color: #888; margin-bottom: 20px; }
+    .filters { display: flex; gap: 16px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+    .filters label { font-size: 13px; color: #555; }
+    .filters select { padding: 5px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; margin-left: 6px; }
+    #count { font-size: 13px; color: #999; margin-left: auto; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-bottom: 14px; background: #fafafa; }
+    .card-header { font-size: 12px; color: #aaa; margin-bottom: 12px; text-transform: uppercase; letter-spacing: .06em; }
+    .audio-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+    .audio-col > .alabel { display: block; font-size: 13px; font-weight: 600; color: #555; margin-bottom: 5px; }
+    audio { width: 100%; }
+    .text-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; border-top: 1px solid #eee; padding-top: 12px; }
+    .text-col > .tl { font-size: 11px; font-weight: 700; color: #bbb; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+    .text-col > p { margin: 0; font-size: 14px; line-height: 1.6; }
+    #empty { display: none; padding: 60px; text-align: center; color: #bbb; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <h1>Audio Comparison: Clean vs Degraded</h1>
+  <p class="subtitle">Compare original clean audio against degraded versions. Ground truth and ASR transcriptions shown below each pair.</p>
+  <div class="filters">
+    <label>Condition<select id="fc"></select></label>
+    <label>Dataset<select id="fd"></select></label>
+    <span id="count"></span>
+  </div>
+  <div id="cards"></div>
+  <div id="empty">No samples match the selected filters.</div>
+<script>
+const S = [{"condition": "clipping", "severity": "0.4", "source": "fleurs", "rank": 1, "gt_text": "however these plans were rendered obsolete nearly overnight when over eight hundred thousand soldiers from the soviets union red army entered and created the belarussian and ukrainian fronts after invading the eastern regions of poland in violation of the riga peace treaty the sovietpolish nonaggression pact and other international treaties both bilateral and multilateral", "clean_pred": "however these plans were rendered obsolete nearly overnight when over eighty thousand soldiers from the soviet union red army entered and created the belas russian and ukrainian fronts after invading the eastern regions of poland in violation of the riga peace treaty the soviet polish non aggression pact and other international treaties both bilateral and multilateral", "pred_text": "however these", "clean_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank01/clean.wav", "degraded_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank01/degraded.wav"}, {"condition": "clipping", "severity": "0.4", "source": "fleurs", "rank": 2, "gt_text": "five minutes into the display a wind starts rolling in about a minute later the wind is reaching seventy kmh then the rain comes but so hard and so large that it slaps your skin like a needle then hail fell from the sky people panicking and screaming and running over each other", "clean_pred": "five minutes into the display a wind starts rolling in about a minute later the wind is reaching seventy kilometers per hour then the rain comes but so hard and so large that it slaps your skin like a needle then hail fell from the sky people panicking and screaming and running over each other", "pred_text": "five minutes into the display and wind starts rolling in about a minute later the wind is reaching seventy kilometers per hour then the rain comes its", "clean_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank02/clean.wav", "degraded_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank02/degraded.wav"}, {"condition": "clipping", "severity": "0.4", "source": "fleurs", "rank": 5, "gt_text": "appropriate use of blogs can empower students to become more analytical and critical through actively responding to internet materials students can define their positions in the context of others writings as well as outline their own perspectives on particular issues oravec two thousand and two", "clean_pred": "appropriate use of blogs can empower students to become more analytical and critical through actively responding to internet materials students can define their positions in the context of others writings as well as outline their perspectives on particular issues oravec two thousand and two", "pred_text": "through actively responding to media materials students can define their positions in the context of others", "clean_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank05/clean.wav", "degraded_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank05/degraded.wav"}, {"condition": "clipping", "severity": "0.4", "source": "fleurs", "rank": 8, "gt_text": "he was reportedly aged in his twenties in a statement bieber said while i was not present nor directly involved with this tragic accident my thoughts and prayers are with the family of the victim", "clean_pred": "he was reportedly aged in his twenties in a statement bieber said while i was not present nor directly involved with this tragic accident my thoughts and prayers are with the family of the victim", "pred_text": "he was reportedly aged in his twenties in a statement bieber said", "clean_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank08/clean.wav", "degraded_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank08/degraded.wav"}, {"condition": "clipping", "severity": "0.4", "source": "fleurs", "rank": 17, "gt_text": "vatican citys population is around eight hundred it is the smallest independent country in the world and the country with the lowest population", "clean_pred": "vatican city population is around eight hundred it is the smallest independent country in the world and the population", "pred_text": "vatican city population is around eight hundred it is the smallest independent country in the world by population", "clean_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank17/clean.wav", "degraded_src": "data/selected_v3_human_eval/clipping__en__0.4__fleurs__rank17/degraded.wav"}, {"condition": "noisegap", "severity": "(5, 0.4)", "source": "fleurs", "rank": 2, "gt_text": "martelly swore in a new provisional electoral council cep of nine members yesterday", "clean_pred": "martelly swore in a new provisional electoral council of nine members yesterday", "pred_text": "martelly s swore in a new prov sisional electoral counsi council of nine membe members yesterday", "clean_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank02/clean.wav", "degraded_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank02/degraded.wav"}, {"condition": "noisegap", "severity": "(5, 0.4)", "source": "fleurs", "rank": 6, "gt_text": "researchers from princeton university in the united states and uppsala university in sweden reported the new species evolved in just two generations though this process had been believed to take much longer due to breeding between an endemic darwin finch geospiza fortes and the immigrant cactus finch geospiza conirostris", "clean_pred": "researchers from princeton university in the united states and uppsala university in sweden reported the new species evolved in just two generations though this process has the ability to take much longer due to the breeding between an endemic darwin finch geospisa fortis and the immigrant cactus finch geospisa conirostris", "pred_text": "researchers from princeton university in the united states and uppsala university in sweden reported the new species of involved in just two generations though this process has the ability to take much longer due to the breeding between an endemic darwin finch geospisa fortis and the immigrant cactus finch geospisa conirostris", "clean_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank06/clean.wav", "degraded_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank06/degraded.wav"}, {"condition": "noisegap", "severity": "(5, 0.4)", "source": "fleurs", "rank": 9, "gt_text": "he was also engaged in engraving banknotes for many countries recent examples of his work including the prime ministerial portraits on the front of the new canadian five dollars and one hundred dollars bills", "clean_pred": "he was also engaged in engraving banknotes for many countries recent examples of his work including the prime ministerial portraits on the front of the new canadian fivedollar and hundreddollar bills", "pred_text": "he was also engaged in engraving banknotes for many countries", "clean_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank09/clean.wav", "degraded_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank09/degraded.wav"}, {"condition": "noisegap", "severity": "(5, 0.4)", "source": "fleurs", "rank": 17, "gt_text": "while this is often only an inaccurate stereotype the best way to get along in paris still is to be on your best behavior acting like someone who is bien eleve well brought up it will make getting about considerably easier", "clean_pred": "while this is often only an inaccurate stereotype the best way to get along in paris still is to be on your best behavior acting like someone who has been who is bien et well brought off it will make getting about considerably easier", "pred_text": "while this is often only an accurate stereotype of time the best way to get along in paris still is to be on your best behavior acting like someone who has been well brought off it will make getting about considerably easier", "clean_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank17/clean.wav", "degraded_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank17/degraded.wav"}, {"condition": "noisegap", "severity": "(5, 0.4)", "source": "fleurs", "rank": 19, "gt_text": "the satellite was sent into space by a rocket scientists use telescopes in space because the earths atmosphere distorts some of our light and view", "clean_pred": "the satellite was sent into space by a rocket scientists use telescopes in space because the earths atmosphere distorts some of our light and view", "pred_text": "the satellite was sent into space by a rocket", "clean_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank19/clean.wav", "degraded_src": "data/selected_v3_human_eval/noisegap__en__5__0.4__fleurs__rank19/degraded.wav"}];
+
+const fc = document.getElementById('fc');
+const fd = document.getElementById('fd');
+
+function addOpts(sel, values, all) {
+  sel.add(new Option(all, ''));
+  values.forEach(v => sel.add(new Option(v, v)));
+}
+addOpts(fc, [...new Set(S.map(s => s.condition))].sort(), 'All conditions');
+addOpts(fd, [...new Set(S.map(s => s.source))].sort(), 'All datasets');
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function render() {
+  const c = fc.value, d = fd.value;
+  const filtered = S.filter(s => (!c || s.condition === c) && (!d || s.source === d));
+  const container = document.getElementById('cards');
+  container.innerHTML = '';
+  document.getElementById('empty').style.display = filtered.length ? 'none' : 'block';
+  document.getElementById('count').textContent = filtered.length + ' sample' + (filtered.length !== 1 ? 's' : '');
+  filtered.forEach(s => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML =
+      '<div class="card-header">' + esc(s.condition) + ' &nbsp;&bull;&nbsp; severity ' + esc(s.severity) + ' &nbsp;&bull;&nbsp; ' + esc(s.source) + '</div>' +
+      '<div class="audio-row">' +
+        '<div class="audio-col"><span class="alabel">Original (clean)</span><audio controls src="' + esc(s.clean_src) + '"></audio></div>' +
+        '<div class="audio-col"><span class="alabel">Degraded</span><audio controls src="' + esc(s.degraded_src) + '"></audio></div>' +
+      '</div>' +
+      '<div class="text-row">' +
+        '<div class="text-col"><div class="tl">Ground truth</div><p>' + esc(s.gt_text) + '</p></div>' +
+        '<div class="text-col"><div class="tl">Transcription (clean)</div><p>' + esc(s.clean_pred) + '</p></div>' +
+        '<div class="text-col"><div class="tl">Transcription (degraded)</div><p>' + esc(s.pred_text) + '</p></div>' +
+      '</div>';
+    container.appendChild(div);
+  });
+}
+
+fc.addEventListener('change', render);
+fd.addEventListener('change', render);
+render();
+</script>
+</body>
+</html>

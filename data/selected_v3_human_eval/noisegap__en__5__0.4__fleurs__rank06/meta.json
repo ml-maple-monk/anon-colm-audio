@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "researchers from princeton university in the united states and uppsala university in sweden reported the new species evolved in just two generations though this process had been believed to take much longer due to breeding between an endemic darwin finch geospiza fortes and the immigrant cactus finch geospiza conirostris",
+  "pred_text_norm": "researchers from princeton university in the united states and uppsala university in sweden reported the new species of involved in just two generations though this process has the ability to take much longer due to the breeding between an endemic darwin finch geospisa fortis and the immigrant cactus finch geospisa conirostris",
+  "clean_model_pred_norm": "researchers from princeton university in the united states and uppsala university in sweden reported the new species evolved in just two generations though this process has the ability to take much longer due to the breeding between an endemic darwin finch geospisa fortis and the immigrant cactus finch geospisa conirostris",
+  "model": "whisper-large-v3",
+  "wer_augmentation": 18.3673,
+  "wer_clean": 14.2857
+}
