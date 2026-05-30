@@ -9,8 +9,8 @@ def parse_dir_name(name: str) -> dict:
       clipping__en__0.4__fleurs__rankNN
       noisegap__en__3__0.4__fleurs__rankNN
       distance__en__16.0__fleurs__rankNN
-      g711mu__en__g711mu__fleurs__rankNN
-      gsm__en__gsm__fleurs__rankNN
+      phone_codec__en__g711mu__fleurs__rankNN
+      phone_codec__en__gsm__fleurs__rankNN
       reverb__en__1.6__fleurs__rankNN
     """
     parts = name.split("__")
