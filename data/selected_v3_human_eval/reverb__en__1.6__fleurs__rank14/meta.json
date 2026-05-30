@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "today the only insects that cannot fold back their wings are dragon flies and mayflies",
+  "pred_text_norm": "today",
+  "clean_model_pred_norm": "today the only insects that cannot fold back their wings are dragonflies and mayflies",
+  "model": "deepgram_v2",
+  "wer_augmentation": 93.3333,
+  "wer_clean": 13.3333
+}

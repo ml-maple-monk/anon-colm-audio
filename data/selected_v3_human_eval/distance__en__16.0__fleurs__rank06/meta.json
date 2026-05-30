@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "also between each dynasty was an unstable age of divided provinces the bestknown of these periods was the three kingdoms epoch taking place for sixty years between the han and the jin dynasty",
+  "pred_text_norm": "most of eastern han dynasty was an unstable age of divided provinces",
+  "clean_model_pred_norm": "also between each dynasty was an unstable age of divided provinces the best known of these periods was the three kingdoms epoch taking place for sixty years between the han and the jin dynasty",
+  "model": "gpt-4o-transcribe",
+  "wer_augmentation": 78.7879,
+  "wer_clean": 6.0606
+}

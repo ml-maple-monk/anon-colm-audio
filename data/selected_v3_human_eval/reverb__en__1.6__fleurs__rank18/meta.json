@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "parisians have a reputation for being egocentric rude and arrogant",
+  "pred_text_norm": "appreciate it",
+  "clean_model_pred_norm": "parisians have a reputation for being egocentric rude and arrogant",
+  "model": "deepgram_v2",
+  "wer_augmentation": 100.0,
+  "wer_clean": 0.0
+}

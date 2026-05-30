@@ -8,17 +8,21 @@ def parse_dir_name(name: str) -> dict:
     Formats:
       clipping__en__0.4__fleurs__rankNN
       noisegap__en__3__0.4__fleurs__rankNN
+      distance__en__16.0__fleurs__rankNN
+      g711mu__en__g711mu__fleurs__rankNN
+      gsm__en__gsm__fleurs__rankNN
+      reverb__en__1.6__fleurs__rankNN
     """
     parts = name.split("__")
     condition = parts[0]
-    if condition == "clipping":
-        severity = parts[2]
-        source = parts[3]
-        rank = int(parts[4][4:])
-    else:  # noisegap
+    if condition == "noisegap":
         severity = f"({parts[2]}, {parts[3]})"
         source = parts[4]
         rank = int(parts[5][4:])
+    else:
+        severity = parts[2]
+        source = parts[3]
+        rank = int(parts[4][4:])
     return {"condition": condition, "severity": severity, "source": source, "rank": rank}
 
 

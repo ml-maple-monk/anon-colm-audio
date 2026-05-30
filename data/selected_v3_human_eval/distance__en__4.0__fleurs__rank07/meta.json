@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "their thermal behavior is not as steady as large caves on earth that often maintain a fairly constant temperature but it is consistent with these being deep holes in the ground said glen cushing of the united states geological survey usgs astrogeology team and of northern arizona university located in flagstaff arizona",
+  "pred_text_norm": "their thermal behavior is not as steady as large caves on earth that often maintain a fairly constant temperature but is consistent with these being deep holes in the ground said glenn cushing a united states geological survey astrogeology team and of northern arizona university located in flagstaff arizona",
+  "clean_model_pred_norm": "their thermal behavior is not as steady as large caves on earth that often maintain a fairly constant temperature but is consistent with these being deep holes in the ground said glenn cushing of the united states geological survey astrogeology team and of northern arizona university located in flagstaff arizona",
+  "model": "deepgram_v2",
+  "wer_augmentation": 9.6154,
+  "wer_clean": 5.7692
+}

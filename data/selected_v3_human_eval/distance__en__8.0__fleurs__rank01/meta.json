@@ -1,0 +1,8 @@
+{
+  "gt_text_norm": "cuomo fifty three began his governorship earlier this year and signed a bill last month legalizing samesex marriage",
+  "pred_text_norm": "q u zero M zero F i v e t y b e g a n h i s g u v e r n zero r s h i p e a l e r",
+  "clean_model_pred_norm": "q zero M fifty three began his governorship earlier this year and signed a bill last month legalizing same sex marriage",
+  "model": "qwen2-audio",
+  "wer_augmentation": 205.8824,
+  "wer_clean": 35.2941
+}
