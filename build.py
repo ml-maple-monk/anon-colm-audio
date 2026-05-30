@@ -3,16 +3,7 @@ import argparse, json, os, pathlib
 
 
 def parse_dir_name(name: str) -> dict:
-    """Extract condition/severity/source/rank from dir name.
-
-    Formats:
-      clipping__en__0.4__fleurs__rankNN
-      noisegap__en__3__0.4__fleurs__rankNN
-      distance__en__16.0__fleurs__rankNN
-      phone_codec__en__g711mu__fleurs__rankNN
-      phone_codec__en__gsm__fleurs__rankNN
-      reverb__en__1.6__fleurs__rankNN
-    """
+    """Extract condition/severity/source/rank from a sample directory name."""
     parts = name.split("__")
     condition = parts[0]
     if condition == "noisegap":
@@ -38,7 +29,7 @@ def find_samples(input_dir: pathlib.Path, script_dir: pathlib.Path) -> list:
             samples.append({
                 **info,
                 "gt_text": meta.get("gt_text_norm", ""),
-                "clean_pred": meta.get("clean_model_pred_norm", ""),
+                "clean_pred": meta.get("clean_pred_norm", ""),
                 "pred_text": meta.get("pred_text_norm", ""),
                 "clean_src": os.path.relpath(sample_dir / "clean.wav", script_dir),
                 "degraded_src": os.path.relpath(sample_dir / "degraded.wav", script_dir),
@@ -52,7 +43,7 @@ HTML_TEMPLATE = """\
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Audio Comparison: Clean vs Degraded</title>
+  <title>Audio Sample Review</title>
   <style>
     body { font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 24px; color: #222; }
     h1 { font-size: 20px; margin-bottom: 4px; }
@@ -73,8 +64,8 @@ HTML_TEMPLATE = """\
   </style>
 </head>
 <body>
-  <h1>Audio Comparison: Clean vs Degraded</h1>
-  <p class="subtitle">Compare original clean audio against degraded versions. Ground truth and ASR transcriptions shown below each pair.</p>
+  <h1>Audio Sample Review</h1>
+  <p class="subtitle">Compare paired audio samples with reference text and system transcripts.</p>
   <div class="filters">
     <label>Condition<select id="fc"></select></label>
     <label>Dataset<select id="fd"></select></label>
@@ -134,7 +125,7 @@ render();
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate audio comparison HTML page.")
+    parser = argparse.ArgumentParser(description="Generate the review HTML page.")
     parser.add_argument(
         "--input", default=None,
         help="Path to samples dir (default: ../selected relative to this script)"

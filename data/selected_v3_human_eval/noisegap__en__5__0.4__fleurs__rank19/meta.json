@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "the satellite was sent into space by a rocket scientists use telescopes in space because the earths atmosphere distorts some of our light and view",
   "pred_text_norm": "the satellite was sent into space by a rocket",
-  "clean_model_pred_norm": "the satellite was sent into space by a rocket scientists use telescopes in space because the earths atmosphere distorts some of our light and view",
-  "model": "gpt-4o-transcribe",
   "wer_augmentation": 64.0,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "the satellite was sent into space by a rocket scientists use telescopes in space because the earths atmosphere distorts some of our light and view"
 }

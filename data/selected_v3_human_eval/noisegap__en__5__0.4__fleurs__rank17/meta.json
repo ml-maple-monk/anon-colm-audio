@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "while this is often only an inaccurate stereotype the best way to get along in paris still is to be on your best behavior acting like someone who is bien eleve well brought up it will make getting about considerably easier",
   "pred_text_norm": "while this is often only an accurate stereotype of time the best way to get along in paris still is to be on your best behavior acting like someone who has been well brought off it will make getting about considerably easier",
-  "clean_model_pred_norm": "while this is often only an inaccurate stereotype the best way to get along in paris still is to be on your best behavior acting like someone who has been who is bien et well brought off it will make getting about considerably easier",
-  "model": "qwen2-audio",
   "wer_augmentation": 17.0732,
-  "wer_clean": 12.1951
+  "wer_clean": 12.1951,
+  "clean_pred_norm": "while this is often only an inaccurate stereotype the best way to get along in paris still is to be on your best behavior acting like someone who has been who is bien et well brought off it will make getting about considerably easier"
 }

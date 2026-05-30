@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "we dont know for sure but it may have had a forked tongue its diet included turtles large fish other mosasaurs and it may even have been a cannibal",
   "pred_text_norm": "we dont know for sure but we have had a fourth time this diet included turtles marshes other and most saucers and it may even happen in a canon",
-  "clean_model_pred_norm": "we dont know for sure but it may have had a forked tongue his diet included turtles large fish other most saucers and it may even have been a cannibal",
-  "model": "deepgram_v2",
   "wer_augmentation": 44.8276,
-  "wer_clean": 10.3448
+  "wer_clean": 10.3448,
+  "clean_pred_norm": "we dont know for sure but it may have had a forked tongue his diet included turtles large fish other most saucers and it may even have been a cannibal"
 }

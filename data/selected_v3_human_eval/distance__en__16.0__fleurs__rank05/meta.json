@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "as light pollution in their heyday was not the kind of problem it is today they are usually located in cities or at campuses easier to reach than those built in modern times",
   "pred_text_norm": "as i mentioned earlier they were not the kind of colleges today",
-  "clean_model_pred_norm": "as light pollution in their heyday was not the kind of problem it is today they are usually located in cities or at campuses easier to reach than those built in modern times",
-  "model": "gpt-4o-transcribe",
   "wer_augmentation": 81.8182,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "as light pollution in their heyday was not the kind of problem it is today they are usually located in cities or at campuses easier to reach than those built in modern times"
 }

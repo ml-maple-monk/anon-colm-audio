@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "but there are a lot of things about birds that still look like a dinosaur",
   "pred_text_norm": "you probably survived the dinosaur",
-  "clean_model_pred_norm": "but there are a lot of things about birds that still look like a dinosaur",
-  "model": "gpt-4o-transcribe",
   "wer_augmentation": 93.3333,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "but there are a lot of things about birds that still look like a dinosaur"
 }

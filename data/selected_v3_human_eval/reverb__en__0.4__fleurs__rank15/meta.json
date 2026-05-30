@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "the word civilization comes from the latin civilis meaning civil related to the latin civis meaning citizen and civitas meaning city or citystate and that also somehow defines the size of the society",
   "pred_text_norm": "the word civilization comes from the latin civis meaning civil related to the latin civitas meaning city or city state and that also somehow defines the size of society",
-  "clean_model_pred_norm": "word civilization comes from the latin civilis meaning civil related to the latin civis meaning citizen a civitas meaning city or city state and that also somehow defines the size of society",
-  "model": "qwen2-audio",
   "wer_augmentation": 24.2424,
-  "wer_clean": 15.1515
+  "wer_clean": 15.1515,
+  "clean_pred_norm": "word civilization comes from the latin civilis meaning civil related to the latin civis meaning citizen a civitas meaning city or city state and that also somehow defines the size of society"
 }

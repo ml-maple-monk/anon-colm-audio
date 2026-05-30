@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "doctor malar balasubramanian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground beside the road in a tshirt and underwear in an apparently heavily medicated state",
   "pred_text_norm": "doctor nala balasivaramanian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground beside the road in a t shirt and underwear in an apparently heavily medicated state",
-  "clean_model_pred_norm": "doctor mela balasubramanian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground beside the road in a t shirt and underwear in an apparently heavily medicated state",
-  "model": "deepgram_v2",
   "wer_augmentation": 11.1111,
-  "wer_clean": 8.3333
+  "wer_clean": 8.3333,
+  "clean_pred_norm": "doctor mela balasubramanian twenty nine was found in blue ash ohio a suburb approximately fifteen miles north of cincinnati lying on the ground beside the road in a t shirt and underwear in an apparently heavily medicated state"
 }

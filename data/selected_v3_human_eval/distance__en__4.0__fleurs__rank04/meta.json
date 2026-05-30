@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "muhammad was deeply interested in matters beyond this mundane life he used to frequent a cave that became known as hira on the mountain of noor light for contemplation",
   "pred_text_norm": "muhammad was deeply interested in matters beyond this mundane life",
-  "clean_model_pred_norm": "muhammad was deeply interested in matters beyond this mundane life he used to frequent a cave that became known as hira on the mountain of noor light for contemplation",
-  "model": "gemini-2.5-pro",
   "wer_augmentation": 65.5172,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "muhammad was deeply interested in matters beyond this mundane life he used to frequent a cave that became known as hira on the mountain of noor light for contemplation"
 }

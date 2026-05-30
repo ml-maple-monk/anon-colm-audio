@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "however these plans were rendered obsolete nearly overnight when over eight hundred thousand soldiers from the soviets union red army entered and created the belarussian and ukrainian fronts after invading the eastern regions of poland in violation of the riga peace treaty the sovietpolish nonaggression pact and other international treaties both bilateral and multilateral",
   "pred_text_norm": "however these",
-  "clean_model_pred_norm": "however these plans were rendered obsolete nearly overnight when over eighty thousand soldiers from the soviet union red army entered and created the belas russian and ukrainian fronts after invading the eastern regions of poland in violation of the riga peace treaty the soviet polish non aggression pact and other international treaties both bilateral and multilateral",
-  "model": "deepgram_v2",
   "wer_augmentation": 96.1538,
-  "wer_clean": 15.3846
+  "wer_clean": 15.3846,
+  "clean_pred_norm": "however these plans were rendered obsolete nearly overnight when over eighty thousand soldiers from the soviet union red army entered and created the belas russian and ukrainian fronts after invading the eastern regions of poland in violation of the riga peace treaty the soviet polish non aggression pact and other international treaties both bilateral and multilateral"
 }

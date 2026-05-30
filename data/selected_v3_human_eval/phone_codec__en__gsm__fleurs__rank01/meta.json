@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "alloys are basically a mixture of two or more metals dont forget that there are many elements on the periodic table",
   "pred_text_norm": "alright guys im going to start off with a little bit of history here now i know that youre probably thinking zero my god this is going to be boring but its not",
-  "clean_model_pred_norm": "alloys are basically a mixture of two or more metals dont forget there are many elements on the pr i table",
-  "model": "qwen2-audio",
   "wer_augmentation": 147.619,
-  "wer_clean": 14.2857
+  "wer_clean": 14.2857,
+  "clean_pred_norm": "alloys are basically a mixture of two or more metals dont forget there are many elements on the pr i table"
 }

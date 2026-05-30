@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "these theories look at what it is about certain people that make them want the things that they do and what things in their environment will make them do or not do certain things",
   "pred_text_norm": "these can be sure to have what it is about certain people that make them want the things that they do and what things in their environment will make them do or not do certain things",
-  "clean_model_pred_norm": "these theories look at what it is about certain people that make them want the things that they do and what things in their environment will make them do or not do certain things",
-  "model": "deepgram_v2",
   "wer_augmentation": 14.7059,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "these theories look at what it is about certain people that make them want the things that they do and what things in their environment will make them do or not do certain things"
 }

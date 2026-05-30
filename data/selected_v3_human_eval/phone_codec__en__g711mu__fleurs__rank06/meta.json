@@ -1,8 +1,7 @@
 {
   "gt_text_norm": "the announcement was made after trump had a phone conversation with turkish president recep tayyip erdogan",
   "pred_text_norm": "noise noise the announcement was made after trump had a phone conversation with president in turkish president rizep but dippu eder don",
-  "clean_model_pred_norm": "the announcement was made after trump had a phone conversation with turkish president recep tayyip erdogan",
-  "model": "qwen2-audio",
   "wer_augmentation": 56.25,
-  "wer_clean": 0.0
+  "wer_clean": 0.0,
+  "clean_pred_norm": "the announcement was made after trump had a phone conversation with turkish president recep tayyip erdogan"
 }
